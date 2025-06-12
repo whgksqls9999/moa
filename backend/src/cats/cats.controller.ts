@@ -5,10 +5,13 @@ import {
     Header,
     HttpCode,
     Param,
+    ParseIntPipe,
     Post,
     Query,
     Redirect,
     Req,
+    UsePipes,
+    ValidationPipe,
 } from '@nestjs/common';
 import { Request } from 'express';
 import { CatsService } from './cats.service';
@@ -20,6 +23,9 @@ export class CatsController {
     constructor(private catsService: CatsService) {}
 
     @Post()
+    /** transform 옵션은 전달받은 파라미터를 자동으로 형변환 시도*/
+    // @UsePipes(new ValidationPipe({ transform: true }))
+    @UsePipes(new ValidationPipe())
     async create(@Body() createCatDto: CreateCatDto) {
         this.catsService.create(createCatDto);
     }
@@ -48,8 +54,9 @@ export class CatsController {
     //     return version;
     // }
 
-    // @Get(':id')
-    // findOne(@Param('id') id: string) {
-    //     return `This action returns a ${id}`;
-    // }
+    @Get(':id')
+    /** id는 int여야함을 보장받고, 그렇지 않으면 예외를 던진다 */
+    findOne(@Param('id', ParseIntPipe) id: number) {
+        return `This action returns a ${id}`;
+    }
 }
