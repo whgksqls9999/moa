@@ -2,9 +2,7 @@ import {
     Column,
     CreateDateColumn,
     Entity,
-    JoinColumn,
     OneToMany,
-    PrimaryColumn,
     PrimaryGeneratedColumn,
 } from 'typeorm';
 import { CoupleMember } from './couple_member.entity';
