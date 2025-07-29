@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
-import { DefaultLayout } from '../components';
+import { DefaultLayout } from '@components';
+import { LoginPage, HomePage } from '@pages';
 
 export function AppRoutes() {
 	const Layout = useLayout();
 
 	return (
 		<Routes>
+			<Route path='/login' element={<LoginPage />} />
 			<Route element={<Layout />}>
-				<Route path='' element={<div></div>} />
-				<Route path='' element={<div></div>} />
-				<Route path='' element={<div></div>} />
+				<Route path='/' element={<HomePage />} />
 			</Route>
 		</Routes>
 	);

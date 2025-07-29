@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -24,4 +25,11 @@ export default defineConfig({
 			// },
 		}),
 	],
+	resolve: {
+		alias: {
+			'@components': path.resolve(__dirname, 'src/components'),
+			'@pages': path.resolve(__dirname, 'src/pages'),
+			'@application': path.resolve(__dirname, 'src/application'),
+		},
+	},
 });
