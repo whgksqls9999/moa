@@ -1,3 +1,5 @@
+import { Couple } from '@entities/couple.entity';
+import { CoupleMember } from '@entities/couple_member.entity';
 import { User } from '@entities/user.entity';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
@@ -15,7 +17,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
             username: this.configService.get('DB_USERNAME'),
             password: this.configService.get('DB_PASSWORD'),
             database: this.configService.get('DB_NAME'),
-            entities: [User],
+            entities: [User, Couple, CoupleMember],
             synchronize: false,
         };
     }
