@@ -1,5 +1,5 @@
-import './FooterSection.style.scss';
+import Style from './FooterSection.module.scss';
 
 export function FooterSection() {
-	return <div className='footer'>Footer</div>;
+	return <div className={Style.footer}>Footer</div>;
 }

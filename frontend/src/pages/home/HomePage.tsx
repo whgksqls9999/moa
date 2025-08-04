@@ -1,3 +1,9 @@
+import { Input } from '@components';
+
 export function HomePage() {
-	return <div>HomePage</div>;
+	return (
+		<div>
+			<Input />
+		</div>
+	);
 }

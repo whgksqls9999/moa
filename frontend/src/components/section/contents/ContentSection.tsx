@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import './ContentSection.style.scss';
+import Style from './ContentSection.module.scss';
 
 export function ContentSection() {
 	return (
-		<div className='contents'>
+		<div className={Style.contents}>
 			<Outlet />
 		</div>
 	);
