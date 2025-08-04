@@ -9,7 +9,8 @@
 		"paths": {
 			"@application": ["application"],
 			"@components": ["components"],
-			"@pages": ["pages"]
+			"@pages": ["pages"],
+			"@global": ["global"]
 		}
 	}
 }

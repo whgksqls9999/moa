@@ -1,9 +1,9 @@
 import { ContentSection, FooterSection, HeaderSection } from '../../section';
-import './DefaultLayout.style.css';
+import Style from './DefaultLayout.module.scss';
 
 export function DefaultLayout() {
 	return (
-		<div className='layout'>
+		<div className={Style.layout}>
 			<HeaderSection />
 			<ContentSection />
 			<FooterSection />
