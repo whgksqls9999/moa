@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import './ContentSection.style.css';
+import './ContentSection.style.scss';
 
 export function ContentSection() {
 	return (

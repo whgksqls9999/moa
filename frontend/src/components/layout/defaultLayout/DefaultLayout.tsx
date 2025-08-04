@@ -1,5 +1,5 @@
 import { ContentSection, FooterSection, HeaderSection } from '../../section';
-import './DefaultLayout.style.css';
+import './DefaultLayout.style.scss';
 
 export function DefaultLayout() {
 	return (

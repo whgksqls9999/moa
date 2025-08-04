@@ -30,6 +30,7 @@ export default defineConfig({
 			'@components': path.resolve(__dirname, 'src/components'),
 			'@pages': path.resolve(__dirname, 'src/pages'),
 			'@application': path.resolve(__dirname, 'src/application'),
+			'@global': path.resolve(__dirname, 'src/global'),
 		},
 	},
 });

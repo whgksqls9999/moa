@@ -1,4 +1,4 @@
-import './HeaderSection.style.css';
+import './HeaderSection.style.scss';
 
 export function HeaderSection() {
 	return <div className='header'>HEADER</div>;
