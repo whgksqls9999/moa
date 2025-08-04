@@ -1,7 +1,7 @@
-import type { InputProps } from './Input.interface';
+import type { HostInputProps } from './Input.interface';
 import Style from './Input.module.scss';
 
-export function Input({ onClick, onKeyDown }: InputProps) {
+export function Input({ onClick, onKeyDown }: HostInputProps) {
 	const classList = [Style.input];
 
 	return (

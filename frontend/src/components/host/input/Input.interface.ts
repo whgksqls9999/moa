@@ -1,6 +1,6 @@
 import type { KeyboardEventHandler, MouseEventHandler } from 'react';
 
-export interface InputProps {
+export interface HostInputProps {
 	onClick?: MouseEventHandler<HTMLInputElement>;
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 }
