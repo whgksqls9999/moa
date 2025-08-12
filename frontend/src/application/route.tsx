@@ -1,19 +1,24 @@
-import { Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, type RouteObject } from 'react-router-dom';
 import { DefaultLayout } from '@components';
-import { LoginPage, HomePage } from '@pages';
+import { LoginPage, MainPage } from '@pages';
 
-export function AppRoutes() {
-	const Layout = useLayout();
+export const routes: RouteObject[] = [
+	{
+		path: '/login',
+		element: <LoginPage />,
+	},
+	{
+		element: <DefaultLayout />,
+		children: [
+			{
+				path: '/',
+				element: <MainPage />,
+			},
+		],
+	},
+];
 
-	return (
-		<Routes>
-			<Route path='/login' element={<LoginPage />} />
-			<Route element={<Layout />}>
-				<Route path='/' element={<HomePage />} />
-			</Route>
-		</Routes>
-	);
-}
+export const router = createBrowserRouter(routes);
 
 /** 추후 레이아웃을 주입받아 같은 페이지여도 다양한 레이아웃에 페이지 렌더링 */
 function useLayout() {

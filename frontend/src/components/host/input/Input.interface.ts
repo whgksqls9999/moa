@@ -1,4 +1,5 @@
 import type {
+	ChangeEventHandler,
 	HTMLInputTypeAttribute,
 	KeyboardEventHandler,
 	MouseEventHandler,
@@ -7,5 +8,6 @@ import type {
 export interface HostInputProps {
 	onClick?: MouseEventHandler<HTMLInputElement>;
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
+	onChange?: ChangeEventHandler<HTMLInputElement>;
 	type?: HTMLInputTypeAttribute;
 }
