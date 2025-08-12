@@ -1,3 +1,4 @@
+import { EN_EVENT, EN_PAGE_ID, eventHub } from '@application';
 import { PasswordInput, Input, Button } from '@components';
 import { useState, type ChangeEvent, type KeyboardEvent } from 'react';
 
@@ -44,6 +45,7 @@ function useLogin() {
 
 	function loginAction() {
 		alert('로그인!');
+		eventHub.emit<EN_PAGE_ID>(EN_EVENT.ROUTE_PAGE, EN_PAGE_ID.MAIN_PAGE);
 	}
 
 	return { onChangeEmail, onChangePassword, onKeyDown, loginAction };

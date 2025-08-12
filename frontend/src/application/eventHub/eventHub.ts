@@ -15,6 +15,8 @@ export class EventHub {
 	}
 }
 
+export const eventHub = new EventHub();
+
 export const enum EN_EVENT {
 	ROUTE_PAGE = 'ROUTE_PAGE',
 }
