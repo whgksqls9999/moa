@@ -1,6 +1,6 @@
 import { createBrowserRouter, type RouteObject } from 'react-router-dom';
 import { DefaultLayout } from '@components';
-import { LoginPage, HomePage } from '@pages';
+import { LoginPage, MainPage } from '@pages';
 
 export const routes: RouteObject[] = [
 	{
@@ -12,7 +12,7 @@ export const routes: RouteObject[] = [
 		children: [
 			{
 				path: '/',
-				element: <HomePage />,
+				element: <MainPage />,
 			},
 		],
 	},
