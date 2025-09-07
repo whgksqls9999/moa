@@ -4,15 +4,15 @@ import { LoginPage, MainPage } from '@pages';
 
 export const routes: RouteObject[] = [
 	{
-		path: '/login',
-		element: <LoginPage />,
-	},
-	{
 		element: <DefaultLayout />,
 		children: [
 			{
 				path: '/',
 				element: <MainPage />,
+			},
+			{
+				path: '/login',
+				element: <LoginPage />,
 			},
 		],
 	},

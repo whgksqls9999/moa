@@ -1,17 +1,25 @@
 import { EN_EVENT, EN_PAGE_ID, eventHub } from '@application';
-import { PasswordInput, Input, Button } from '@components';
+import { PasswordInput, Input, Button, FormField } from '@components';
 import { useState, type ChangeEvent, type KeyboardEvent } from 'react';
+import Style from './LoginForm.module.scss';
 
 export function LoginForm() {
 	const { onChangeEmail, onChangePassword, loginAction, onKeyDown } =
 		useLogin();
 
 	return (
-		<div>
+		<div className={Style['login-form']}>
 			{/* [TODO] EmailInput? */}
-			<Input type='email' onChange={onChangeEmail} />
-			<PasswordInput onChange={onChangePassword} onKeyDown={onKeyDown} />
-			<Button onClick={loginAction} />
+			<FormField label='이메일'>
+				<Input type='email' onChange={onChangeEmail} />
+			</FormField>
+			<FormField label='비밀번호'>
+				<PasswordInput
+					onChange={onChangePassword}
+					onKeyDown={onKeyDown}
+				/>
+			</FormField>
+			<Button onClick={loginAction}>로그인</Button>
 		</div>
 	);
 }
